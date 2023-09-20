@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweat Bet</title>
+    <link rel="stylesheet" type= text/css href="{{url_for('static', filename='CSS/bootstrap.css')}}">
+    <link rel="stylesheet" type= text/css href="{{url_for('static', filename='CSS/style.css')}}">
+</head>
+<body>
+
+
+  <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/dashboard"><i class="fa-solid fa-dollar-sign fa-flip"></i>WEAT <i class="fa-brands fa-btc fa-flip"></i>ETS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/dashboard" class="nav-link">Home</a>
+            </li>
+          </ul> 
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Welcome -->
+    <div class="container-fluid padding">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4">All the lines in one place.</h1>
+        </div>
+        <hr class="my-4">
+        <div class="col-12">
+          <p class="lead">See all the lines from the top sportsbooks in the US! Get your edge.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register and Login -->
+
+    <div class="container-fluid d-flex justify-content-center align-items-center mb-5">
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">         
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column mb-3" style="background: gainsboro;">
+        
+                <h2 class="header-text mt-3">Register</h2>
+                {% for message in get_flashed_messages(category_filter =["name_err","last_name_err", "email_err", "pass_err", "match_err", "valid"]) %}
+                <p style="font-weight: bold; color: red;">{{message}}</p>
+                {% endfor %}
+                <div class="row align-items-center">
+                    <form action="/register" method="POST">
+                            <label>First Name:</label>
+                            <input type="text" placeholder="First Name" class="form-control form-control-lg bg-light fs-6 mb-3" name="first_name">
+                            <label>Last Name:</label>
+                            <input type="text" placeholder="Last Name" class="form-control form-control-lg bg-light fs-6 mb-3" name="last_name">
+                            <label>Email:</label>
+                            <input type="text" placeholder="youremail@example.com" class="form-control form-control-lg bg-light fs-6 mb-3" name="email">
+                            <label>Password:</label>
+                            <input type="password" class="form-control form-control-lg bg-light fs-6 mb-3" placeholder="Password" name="password">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control form-control-lg bg-light fs-6 mb-3" placeholder="Password" name="confirm_password">
+                            <button class="btn btn-primary mb-3">Register</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column">
+                {% for message in get_flashed_messages(category_filter =["login_err"]) %}
+                <p style="font-weight: bold; color: red;">{{message}}</p>
+                {% endfor %}
+                <h2 class="header-text mb-4">Log in</h2>
+                <div class="row align-items-center">
+                    <form action="/login" method="POST">
+                        <label>Email:</label>
+                        <input type="text" name="email" placeholder="Your Email" class="form-control form-control-lg bg-light fs-6 mb-3">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Password" class="form-control form-control-lg bg-light fs-6 mb-3">
+                        <button class="btn btn-success mb-3">Log in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- columns link -->
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fa-regular fa-bookmark"></i>
+      <h3>Save Your Bets</h3>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fa-solid fa-users"></i>
+      <h3>Follow Your Friends</h3>
+    </div>
+    <div class="col-md-4">
+      <i class="fa-solid fa-calculator"></i>
+      <h3>Track Your Winnings</h3>
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+
+<!--  Footer -->
+<footer class="bg-dark">
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-dollar-sign fa-flip"></i>WEAT <i class="fa-brands fa-btc fa-flip"></i>ETS</a>
+        <hr class="light">
+        <p>PhoneNumber</p>
+        <p>Email</p>
+        <p>Address</p>
+        <p>City, State, Zipcode</p>
+      </div>
+      <div class="col-md-6">
+        <hr class="light">
+        <h5>Areas of Service</h5>
+        <hr class="light">
+        <p>USA</p>
+        <p>Canada</p>
+      </div>
+      <div class="col-12">
+        <hr class="light-100">
+        <h5>&copy; sweatbets.com</h5>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>   
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweat Bet</title>
+    <link rel="stylesheet" type= text/css href="{{url_for('static', filename='CSS/bootstrap.css')}}">
+    <link rel="stylesheet" type= text/css href="{{url_for('static', filename='CSS/style.css')}}">
+</head>
+<body>
+
+
+  <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><i class="fa-solid fa-dollar-sign fa-flip"></i>WEAT <i class="fa-brands fa-btc fa-flip"></i>ETS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Your Bets</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Friend Feed</a>
+            </li>
+          </ul> 
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Image slider -->
+
+    <div class="carousel slide" id="slides" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='imgs/sportsbetting.webp') }}" alt="bets">
+          <div class="carousel-caption">
+            <h1 class="display-2">Sweat bets</h1>
+            <h3>Let us sweat your bets for you</h3>
+            <a href="/signup"><button type="button" class="btn btn-primary btn-lg">Get Started</button></a>
+            <a href="/signup"><button type="button" class="btn btn-success btn-lg">Log In</button></a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='imgs/money.jpg') }}" alt="money">
+          <div class="carousel-caption">
+            <h1 class="display-2">Sweat bets</h1>
+            <h3>Let us sweat your bets for you</h3>
+          <a href="/signup"><button type="button" class="btn btn-primary btn-lg">Get Started</button></a>
+          <a href="/signup"><button type="button" class="btn btn-success btn-lg">Log In</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="container-fluid">
+      <div class="row jumbotron text-center">
+        <div class="col-12">
+          <p class="lead">Track your bets and your friends, keep up with all the scores, and count the money!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome -->
+    <div class="container-fluid padding">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4">All the lines in one place.</h1>
+        </div>
+        <hr class="my-4">
+        <div class="col-12">
+          <p class="lead">See all the lines from the top sportsbooks in the US! Get your edge.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- columns link -->
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fa-regular fa-bookmark"></i>
+      <h3>Save Your Bets</h3>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fa-solid fa-users"></i>
+      <h3>Follow Your Friends</h3>
+    </div>
+    <div class="col-md-4">
+      <i class="fa-solid fa-calculator"></i>
+      <h3>Track Your Winnings</h3>
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+
+<!--  Footer -->
+<footer class="bg-dark">
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-dollar-sign fa-flip"></i>WEAT <i class="fa-brands fa-btc fa-flip"></i>ETS</a>
+        <hr class="light">
+        <p>PhoneNumber</p>
+        <p>Email</p>
+        <p>Address</p>
+        <p>City, State, Zipcode</p>
+      </div>
+      <div class="col-md-6">
+        <hr class="light">
+        <h5>Areas of Service</h5>
+        <hr class="light">
+        <p>USA</p>
+        <p>Canada</p>
+      </div>
+      <div class="col-12">
+        <hr class="light-100">
+        <h5>&copy; sweatbets.com</h5>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>   
+</body>
+</html>
