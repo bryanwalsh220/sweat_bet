@@ -66,58 +66,38 @@
         </div>
     </div>
     </div>
-    <p>This is where ajax will be populating data</p>
+    <!-- <p>This is where ajax will be populating data</p> -->
+
     <table class="table table-bordered">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Home</th>
-          <th scope="col">Away</th>
-          <th scope="col">Home MoneyLine Odds</th>
-          <th scope="col">Away MoneyLine Odds</th>
-          <th scope="col">View Game</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr id="team-info">
-          <td id="home-team"></td>
-          <td id="away-team"></td>
-          <td class="text-center align-middle">
-            <!-- <button type="button" class="btn btn-outline-info collapsible text-center"></button> -->
-            <div class="collapsible-content collapse">
-              <table class="table table-bordered">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody id="money-home">
-                </tbody>
-              </table>
-            </div>
-          </td>
-          <td class="text-center align-middle">
-            <!-- <button type="button" class="btn btn-outline-info collapsible text-center"></button> -->
-            <div class="collapsible-content collapse">
-              <table class="table table-bordered">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody id="money-away">
-                </tbody>
-              </table>
-            </div>
-          </td>
-          <td class="text-center align-middle"><button type="button" class="btn btn-outline-success">View Game</button></td>
-        </tr>
-      </tbody>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Home</th>
+                <th scope="col">Away</th>
+                <th scope="col">View Game</th>
+            </tr>
+        </thead>
+        <tbody id="team-info">
+        </tbody>
     </table>
     
-  
-</div>
+    <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gameModalLabel">Game Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -151,8 +131,10 @@
 </div>
 </footer>
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>   
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>   
-<script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>   
+<script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
+
 </body>
 </html>

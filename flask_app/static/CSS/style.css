@@ -107,8 +107,7 @@ hr.light-100 {
   
 }
 
-
-.active, .collapsible:hover {
+.collapsible:hover {
   background-color: #ccc;
 }
 
